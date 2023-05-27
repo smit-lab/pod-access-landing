@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;400&display=swap"
+      rel="preload stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Pod Access Landing Page</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#">
+          <img src="./assets/svg/logo.svg" alt="Pod Logo" class="nav-logo" />
+        </a>
+      </nav>
+    </header>
+    <main class="hero">
+      <h1 class="hero__heading">
+        Publish your podcasts <br />
+        <span>everywhere</span>.
+      </h1>
+      <p class="hero__para">
+        Upload your audio to Pod with a single click. We’ll then distribute your
+        podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
+        more!
+      </p>
+        <div class="hero-form">
+          <form action="#" id="form" novalidate>
+            <div class="hero-cta-container">
+              <input
+              type="email"
+              name="email"
+              placeholder="Email address"
+              id="email"
+              class="email-box"
+              />
+              <button type="submit" class="submit-btn" id="submit">
+                Request Access
+              </button>
+            </div>
+          </form>
+          <div class="error-msg" id="error"></div>
+        </div>
+        <div class="hero-social">
+          <img src="./assets/svg/spotify.svg" alt="Spotify logo" />
+          <img src="./assets/svg/pocket-casts.svg" alt="Pocket podcast logo" />
+          <img src="./assets/svg/apple-podcast.svg" alt="Apple podcast logo" />
+          <img
+            src="./assets/svg/google-podcasts.svg"
+            alt="Google podcast logo"
+          />
+        </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

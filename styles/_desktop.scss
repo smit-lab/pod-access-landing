@@ -1,0 +1,43 @@
+@media (min-width: 1024px) {
+  body {
+    &::before {
+      background-image: url(../assets/desktop/image-host.jpg);
+      background-size: rem(888) rem(640);
+      background-position: right center;
+    }
+
+    &::after {
+      background-position: right bottom;
+      bottom: 6.5%;
+      transform: translate(0);
+      right: 0;
+      left: unset;
+    }
+  }
+  .header {
+    max-width: calc(100vw - rem(330));
+    padding: rem(80) rem(0);
+  }
+
+  .hero {
+    margin-left: rem(165);
+    padding-top: rem(88);
+    padding-bottom: rem(30);
+    width: rem(723);
+
+    &__heading {
+      font-size: rem(52);
+      line-height: 1.19;
+      margin-bottom: rem(24);
+    }
+
+    &-form {
+      height: rem(78);
+    }
+  }
+
+  .submit-btn:hover {
+    background-color: $btnHover;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,130 @@
+@import "reset";
+@import "variable";
+@import "function";
+@import "common";
+
+body {
+  background-color: $veryDarkGreen;
+  color: $white;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../assets/mobile/image-host.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: difference;
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+
+  
+}
+
+.header,
+.hero {
+  width: calc(100vw - rem(36));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  padding: rem(62) 0 rem(57);
+}
+
+.hero {
+  &__heading {
+    font-size: rem(26);
+    color: $lightGreen;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: rem(16);
+    & span {
+      color: $white;
+    }
+  }
+  &__para {
+    font-size: rem(15);
+    line-height: 1.67;
+    color: $lightbluish;
+    margin-bottom: rem(33);
+  }
+
+
+  &-social {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: rem(30);
+    align-items: center;
+  }
+
+  &-cta-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &-form {
+    margin-bottom: rem(40);
+  }
+}
+
+.email-box {
+  border-radius: rem(100);
+  background-color: $darkGray;
+  border: none;
+  width: rem(327);
+  height: rem(48);
+  padding: rem(0) rem(0) rem(0) rem(24);
+  color: $white;
+  font-family: "Chivo", sans-serif;
+  font-size: rem(14);
+  font-weight: 400;
+
+  &::placeholder {
+    font-family: "Chivo", sans-serif;
+    font-size: rem(14);
+    font-weight: 400;
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.submit-btn {
+  border-radius: rem(100);
+  border: none;
+  width: rem(327);
+  height: rem(48);
+  background-color: $lightGreen;
+  font-weight: 400;
+  font-family: "Chivo", sans-serif;
+  font-size: rem(14);
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.2);
+}
+
+.error-msg {
+  font-size: rem(12);
+  line-height: 1.166;
+  color: $error;
+  font-weight: 400;
+  margin: rem(8) rem(0) rem(0) rem(24);
+}
+
+
+
+@import "tablet";
+@import "desktop";

@@ -1,0 +1,100 @@
+@media (min-width: 768px) {
+  body {
+    text-align: left;
+    &::before {
+      background-image: url(../assets/tablet/image-host.jpg);
+      background-size: rem(491) rem(767);
+      background-position: right top;
+      mix-blend-mode: lighten;
+      opacity: 0.8;
+    }
+
+    &::after {
+      content: '';
+      background-image: url(../assets/svg/bg-pattern-dots.svg);
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: rem(232) rem(104);
+      position: absolute;
+      width: rem(232);
+      height: rem(104);
+      bottom: 0;
+      left: 0;
+      transform: translateX(rem(30));
+    }
+  }
+
+  .header,
+  .hero {
+    width: calc(100vw - rem(40));
+    align-items: flex-start;
+  }
+
+  .header {
+    padding: rem(50) 0 rem(152);
+  }
+
+  .hero {
+    padding-top: rem(93);
+    background-color: $veryDarkGreen;
+    width: rem(635);
+    margin-left: rem(39);
+
+    &__heading {
+      font-size: rem(48);
+      line-height: 1.17;
+      margin-bottom: rem(31);
+    }
+
+    &__para {
+      font-size: rem(18);
+      line-height: 1.56;
+      width: rem(445);
+      height: auto;
+      margin-bottom: rem(40);
+    }
+
+
+    &-social {
+      width: 100%;
+      grid-template-columns: repeat(4, max-content);
+      justify-items: left;
+      margin-bottom: 0;
+    }
+
+    &-cta-container {
+      flex-direction: row;
+      gap: rem(16);
+    }
+    
+    &-form {
+      margin-bottom: rem(64);
+      
+    }
+  }
+
+  .email-box {
+    width: rem(427);
+    height: rem(56);
+    padding: rem(0) rem(174) rem(0) rem(24);
+
+    &::placeholder {
+      font-family: "Chivo", sans-serif;
+      font-size: rem(14);
+      font-weight: 400;
+      color: $white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .submit-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(5);
+    width: rem(162);
+  }
+}
